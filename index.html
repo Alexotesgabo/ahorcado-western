@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego del Ahorcado Western</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Gifs decorativos laterales -->
+  <img class="gif-lado izquierdo" src="decoracion.gif" alt="Decoración izquierda" />
+  <img class="gif-lado derecho" src="decoracion.gif" alt="Decoración derecha" />
+
+  <!-- Fondo y contenido -->
+  <div class="fondo">
+    <div class="juego">
+      <div class="contenedor-horca">
+        <div class="horca">
+          <div class="cabeza parte"></div>
+          <div class="torso parte"></div>
+          <div class="brazo-izq parte"></div>
+          <div class="brazo-der parte"></div>
+          <div class="pierna-izq parte"></div>
+          <div class="pierna-der parte"></div>
+          <div class="sombrero parte"></div>
+        </div>
+        <div class="letras" id="letras"></div>
+      </div>
+
+      <div class="abecedario" id="abecedario"></div>
+    </div>
+  </div>
+
+  <!-- Pantalla de resultado -->
+  <div class="resultado" id="resultado">
+    <img id="gifResultado" src="" alt="Resultado" />
+    <p id="mensajeResultado"></p>
+    <button onclick="reiniciarJuego()">Reiniciar</button>
+  </div>
+
+  <!-- Audios -->
+  <audio id="musicaJuego" src="musica_juego.mp3" loop></audio>
+  <audio id="musicaVictoria" src="musica_victoria.mp3"></audio>
+  <audio id="musicaDerrota" src="musica_derrota.mp3"></audio>
+
+  <!-- Scripts -->
+  <script src="palabras.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
